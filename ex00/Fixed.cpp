@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:28:17 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/16 20:12:35 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/16 20:29:03 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ Fixed :: Fixed(const Fixed &obj)
     fixed_point = obj.fixed_point;
 }
 
-void Fixed ::  operator =(Fixed &obj)
+Fixed &Fixed ::  operator =(Fixed &obj)
 {
     std :: cout << "Copy assignment operator called\n";
     fixed_point = obj.fixed_point;
+    return *this;
 }
 
 void Fixed :: setRawBits(int const raw)
