@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:17:30 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/18 19:43:24 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:31:53 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ Fixed :: Fixed ()
     std :: cout << "default constructor called" << std :: endl;
 }
 
-Fixed :: Fixed(const Fixed &obj):fixed_point(obj.fixed_point)
+Fixed :: Fixed(const Fixed &obj)
 {
+    *this = obj;
     std :: cout << "copy constructor called" <<  std :: endl;
 }
 
@@ -32,7 +33,7 @@ fixed_point (num << fractional_part)
 }
 
 Fixed :: Fixed(const float floating)
-:fixed_point (static_cast <int>(roundf(floating * (1 << fractional_part))))
+:fixed_point ((int)(roundf(floating * (1 << fractional_part))))
 {
      std :: cout << "Float constructor called" <<  std :: endl;
 }
@@ -49,7 +50,7 @@ Fixed &Fixed ::  operator =(const Fixed &obj)
 
 float Fixed :: toFloat(void) const
 {
-    return (static_cast <float>(fixed_point) / (1 << fractional_part));
+    return ((float)(fixed_point) / (1 << fractional_part));
 }
 
 int Fixed :: toInt(void) const
