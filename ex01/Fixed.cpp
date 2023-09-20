@@ -6,14 +6,14 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:17:30 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/19 15:31:53 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:30:53 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.hpp"
 
-int Fixed :: fractional_part = 8;
+
 Fixed :: Fixed ()
 {
     fixed_point = 0;
@@ -43,8 +43,8 @@ Fixed &Fixed ::  operator =(const Fixed &obj)
     if (this != &obj)
     {
         fixed_point = obj.fixed_point;
-        std :: cout << "Copy assignment operator called" <<  std :: endl;
     }
+    std :: cout << "Copy assignment operator called" <<  std :: endl;
     return *this;
 }
 

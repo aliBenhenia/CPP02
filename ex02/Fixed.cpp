@@ -6,14 +6,14 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 12:31:27 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/19 20:46:50 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:56:11 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.hpp"
 
-int Fixed :: fractional_part = 8;
+
 Fixed :: Fixed ()
 {
     fixed_point = 0;
@@ -118,7 +118,6 @@ Fixed Fixed :: operator+(const Fixed &b)const
     Fixed A;
 
     A.fixed_point = this->fixed_point + b.fixed_point;
-    std::cout << A.toFloat() << std::endl;
     return (A);
 }
 
@@ -127,7 +126,6 @@ Fixed Fixed :: operator-(const Fixed &b)const
     Fixed A;
 
     A.fixed_point = this->fixed_point - b.fixed_point;
-    std::cout << A.toFloat() << std::endl;
     return (A);
 }
 

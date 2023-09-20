@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:17:35 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/19 15:19:56 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:20:15 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main( void ) {
         Fixed a;
-        Fixed const b( 10); // 2560
-        Fixed const c( 42.42f); // 10860
+        Fixed const b( 10); 
+        Fixed const c( 42.42f); 
         Fixed const d( b );
         a = Fixed( 1234.4321f);
         std::cout << "a is " << a << std::endl;

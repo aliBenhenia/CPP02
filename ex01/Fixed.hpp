@@ -6,7 +6,7 @@
 /*   By: abenheni <abenheni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:17:32 by abenheni          #+#    #+#             */
-/*   Updated: 2023/09/18 19:28:14 by abenheni         ###   ########.fr       */
+/*   Updated: 2023/09/20 15:46:10 by abenheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ class Fixed
 {
         private :
             int  fixed_point;
-            static  int fractional_part;
+            const static  int fractional_part = 8;
         public :
             Fixed();
             Fixed(const Fixed &obj);
